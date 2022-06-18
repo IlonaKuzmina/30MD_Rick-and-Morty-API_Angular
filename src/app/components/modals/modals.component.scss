@@ -1,0 +1,44 @@
+.modal {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+  }
+  
+  .modal.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .modal__content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c0ced1;
+    min-width: 25%;
+    color: #071c34;
+    position: relative;
+  }
+  
+  .close__btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    color: #071c34;
+    font-weight: bold;
+  
+    &:hover {
+      color: #144361;
+    }
+  }
+
+  

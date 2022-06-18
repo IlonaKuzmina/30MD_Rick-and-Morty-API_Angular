@@ -1,0 +1,23 @@
+.characters__container,
+.filters__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input,
+.selector {
+  margin: 0 20px;
+  background-color: transparent;
+  color: lightgreen;
+  border: 3px solid;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.selector {
+  padding: 12px;
+}

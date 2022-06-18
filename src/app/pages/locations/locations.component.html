@@ -1,0 +1,30 @@
+<div class="filters__container">
+  <form #ctrl="ngForm">
+    <input
+      (keyup)="setLocation(location.value)"
+      ngModel
+      name="location"
+      #location="ngModel"
+      class="input"
+      type="text"
+      placeholder="Search by location..."
+    />
+
+    <input
+      (keyup)="setDimension(dimension.value)"
+      ngModel
+      name="dimension"
+      #dimension="ngModel"
+      class="input"
+      type="text"
+      placeholder="Search by dimension..."
+    />
+  </form>
+</div>
+
+<div class="locations__wrapper">
+  <div  *ngFor="let location of locations">
+  <app-location-card [location]="location"></app-location-card>
+</div>
+</div>
+

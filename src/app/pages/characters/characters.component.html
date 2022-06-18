@@ -1,0 +1,37 @@
+<ng-container *ngIf="isList">
+  <div class="filters__container">
+    <form>
+      <input
+        (keyup)="setValue(name.value)"
+        ngModel
+        name="name"
+        #name="ngModel"
+        class="input"
+        type="text"
+        placeholder="Search by name..."
+      />
+    </form>
+    {{ name.value }}
+    <select
+      class="selector"
+      ngModel
+      #gender="ngModel"
+      gender="gender"
+      (change)="setGender(gender.value)"
+    >
+      <option value="" disabled selected>Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </div>
+  <div class="characters__container">
+    <app-characters-card
+      *ngFor="let character of characters"
+      [character]="character"
+    ></app-characters-card>
+  </div>
+</ng-container>
+
+<div *ngIf="!isList">
+  <app-character></app-character>
+</div>
