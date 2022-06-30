@@ -25,3 +25,10 @@
   word-wrap: break-word;
   text-align: center;
 }
+
+.paragraph {
+  cursor: pointer;
+  &:hover {
+    color: #ff0058;
+  }
+}
